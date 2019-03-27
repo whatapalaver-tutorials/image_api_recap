@@ -49,6 +49,11 @@ npm install --save react-router-dom
 - [ ] You can specify a NOT_FOUND route in the Root of your app. (`<Route component={NotFound} />`)
 - [x] Deploy to `gh-pages` or [https://www.netlify.com/](https://www.netlify.com/)
 
+
+## Shout Outs
+
+[Page Not Found on Netlify with React Router](https://www.slightedgecoder.com/2018/12/18/page-not-found-on-netlify-with-react-router/)
+
 ## License
 
 This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
