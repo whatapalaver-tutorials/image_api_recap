@@ -8,8 +8,19 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography'
 import red from '@material-ui/core/colors/red';
+import CardActions from '@material-ui/core/CardActions';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
   card: {
     maxWidth: 400,
   },
@@ -44,7 +55,7 @@ class PhotoList extends Component {
   }
 
   componentDidMount() {
-    let URL = 'https://rickandmortyapi.com/api/character/'
+    let URL = 'https://rickandmortyapi.com/api/character/?status=Dead'
 
     fetch(URL)
 
@@ -63,36 +74,42 @@ class PhotoList extends Component {
     const {classes} = this.props
     return ( 
       <div>
-        <h1>Hello from PhotoList</h1>
-        {this.state.characters.map(character =>
-          <Card className={classes.card} key={character.id}>
-          <CardHeader
-            avatar={
-              <Avatar className={classes.avatar}>
-                R&M
-              </Avatar>
-            }
-            title={character.name}
-            subheader={character.species}
-          />
-          <CardMedia className={classes.media} style={{height: 0, paddingTop: '56.25%'}}
-            image={character.image}
-            alt={character.name}
-            title={character.name}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {character.type}
-            </Typography>
-            <Typography component="p">
-              {character.gender}
-            </Typography>
-          </CardContent>
-          <Link key={character.id} to={`${this.props.match.url}/${character.id}`}>
-            <p>see more</p>
-          </Link>
-        </Card>
-        )}
+        <h1>Hello from the Dead Characters of Rick and Morty</h1>
+        <Grid container spacing={8}>
+          {this.state.characters.map(character =>
+          <Grid item xs={3}>
+            <Card className={classes.card} key={character.id}>
+              <CardHeader
+                avatar={
+                  <Avatar className={classes.avatar}>
+                    R&M
+                  </Avatar>
+                }
+                title={character.name}
+                subheader={character.species}
+              />
+              <CardMedia className={classes.media} style={{height: 0, paddingTop: '56.25%'}}
+                image={character.image}
+                alt={character.name}
+                title={character.name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {character.type}
+                </Typography>
+                <Typography component="p">
+                  {character.gender}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary" component={Link} to={`${this.props.match.url}/${character.id}`}>
+                See More
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          )}
+        </Grid>
       </div>
      );
   }

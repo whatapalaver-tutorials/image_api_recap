@@ -5,13 +5,13 @@ The goals of this exercise is to create a photo application with React and conso
 
 ## Exercise
 
-- [ ] Choose your photo-like api:
+- [x] Choose your photo-like api:
   - [http://jsonplaceholder.typicode.com/](http://jsonplaceholder.typicode.com/)
   - [Rick & Morty](https://rickandmortyapi.com/)
-- [ ] Create your app using `create-react-app`
-- [ ] There should be a page that displays a list of photos in the following path `/photos`
-- [ ] There should be a page that displays a single photo in the following path `/photos/:id`
-- [ ] When the user clicks on a photo in `/photos` the app should take the user to `/photos/:id`
+- [x] Create your app using `create-react-app`
+- [x] There should be a page that displays a list of photos in the following path `/photos`
+- [x] There should be a page that displays a single photo in the following path `/photos/:id`
+- [x] When the user clicks on a photo in `/photos` the app should take the user to `/photos/:id`
 
 ### Notes
 
@@ -42,12 +42,12 @@ npm install --save react-router-dom
 
 ## Bonus
 
-- [ ] Add some style with [https://react-bootstrap.github.io/](https://react-bootstrap.github.io/) or [http://material-ui.com/](http://material-ui.com/)
+- [x] Add some style with [https://react-bootstrap.github.io/](https://react-bootstrap.github.io/) or [http://material-ui.com/](http://material-ui.com/)
 - [ ] Using this endpoint [http://jsonplaceholder.typicode.com/posts](http://jsonplaceholder.typicode.com/posts), create a page that displays a list of posts in the following path: [http://localhost:3000/posts](http://localhost:3000/posts)
 - [ ] Add a form at the top of the page to add a new post. This url [http://jsonplaceholder.typicode.com/posts](http://jsonplaceholder.typicode.com/posts) also accepts the verb "POST" to add a new post
 - [ ] If you use the Rick & Morty API, you can add a [filter](https://rickandmortyapi.com/documentation/#filter-characters) of the characters list
 - [ ] You can specify a NOT_FOUND route in the Root of your app. (`<Route component={NotFound} />`)
-- [ ] Deploy to `gh-pages` or [https://www.netlify.com/](https://www.netlify.com/)
+- [x] Deploy to `gh-pages` or [https://www.netlify.com/](https://www.netlify.com/)
 
 ## License
 
